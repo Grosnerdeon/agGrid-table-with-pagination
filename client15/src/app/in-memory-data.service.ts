@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
 import { IUser } from './interfaces';
+import { InMemoryDbService, ParsedRequestUrl, RequestInfo, RequestInfoUtilities } from 'angular-in-memory-web-api';
 
 @Injectable({
   providedIn: 'root'
 })
-export class InMemoryDataService {
+export class InMemoryDataService implements InMemoryDbService {
   constructor() { }
-  createDb() {
+  createDb(reqInfo: RequestInfo) {
     const users: IUser[] = [];
+
+    //console.log(reqInfo.query);
 
     for (let i = 1; i < 1000; i++) {
       users.push({

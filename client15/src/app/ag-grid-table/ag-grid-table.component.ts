@@ -12,10 +12,10 @@ import { UserService } from '../user.service';
 })
 export class AgGridTableComponent {
   public columnDefs: ColDef[] = [
-    { field: 'name', flex: 1},
-    { field: 'firstName', flex: 1},
-    { field: 'lastName', flex: 1 },
-    { field: 'registrationTime', flex: 1 }
+    { field: 'name', flex: 1, lockVisible: true,},
+    { field: 'firstName', flex: 1, lockVisible: true,},
+    { field: 'lastName', flex: 1, lockVisible: true, },
+    { field: 'registrationTime', flex: 1, lockVisible: true, }
   ];
   
   public defaultColDef: ColDef = {
