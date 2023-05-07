@@ -7,11 +7,13 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
 import { AgGridTableComponent } from './ag-grid-table/ag-grid-table.component';
+import { ActionsCellComponent } from './actions-cell/actions-cell.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AgGridTableComponent,
+    ActionsCellComponent,
   ],
   imports: [
     BrowserModule,

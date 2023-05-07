@@ -10,3 +10,7 @@ html, body {
    box-sizing: border-box;
    -webkit-overflow-scrolling: touch;
 }
+
+.ag-cell-focus,.ag-cell-no-focus{
+   border:none !important;
+ }

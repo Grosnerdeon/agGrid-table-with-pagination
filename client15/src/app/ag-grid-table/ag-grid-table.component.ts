@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { IUser } from '../interfaces';
 import { AgGridAngular } from 'ag-grid-angular';
 import { UserService } from '../user.service';
+import { ActionsCellComponent } from '../actions-cell/actions-cell.component';
 
 @Component({
   selector: 'app-ag-grid-table',
@@ -12,15 +13,20 @@ import { UserService } from '../user.service';
 })
 export class AgGridTableComponent {
   public columnDefs: ColDef[] = [
-    { field: 'name', flex: 1, lockVisible: true,},
-    { field: 'firstName', flex: 1, lockVisible: true,},
-    { field: 'lastName', flex: 1, lockVisible: true, },
-    { field: 'registrationTime', flex: 1, lockVisible: true, }
+    { field: 'name', flex: 1, lockVisible: true, cellClass: 'no-border'},
+    { field: 'firstName', flex: 1, lockVisible: true, cellClass: 'no-border'},
+    { field: 'lastName', flex: 1, lockVisible: true, cellClass: 'no-border' },
+    { field: 'registrationTime', flex: 1, lockVisible: true, cellClass: 'no-border'},
+    {
+      field: 'actions',
+      cellRenderer: ActionsCellComponent,
+    }
   ];
   
   public defaultColDef: ColDef = {
     sortable: true,
     resizable: true,
+    
   };
 
   public rowData$!: Observable<IUser[]>;
