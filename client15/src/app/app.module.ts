@@ -8,12 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
 import { AgGridTableComponent } from './ag-grid-table/ag-grid-table.component';
 import { ActionsCellComponent } from './actions-cell/actions-cell.component';
+import { AgGridTableWithPagesComponent } from './ag-grid-table-with-pages/ag-grid-table-with-pages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AgGridTableComponent,
     ActionsCellComponent,
+    AgGridTableWithPagesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IUser } from './interfaces';
 import { UserService } from './user.service';
+import { ModuleRegistry } from 'ag-grid-community';
 
 @Component({
   selector: 'app-root',
